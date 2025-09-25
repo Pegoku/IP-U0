@@ -1,10 +1,24 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
+int main()
+{
+    int posNums, negNums, num;
 
-int main() {
-    printf("%d", calcQuadrat(4));
+    for (int i = 0; i < 20; i++)
+    {
+        scanf("%d", &num);
+        if (num > 0)
+        {
+            posNums += num;
+        }
+        else
+        {
+            negNums += num;
+        }
+    }
+
+    printf("Positius: %d\n", posNums);
+    printf("Negatius: %d", negNums);
+
     return 0;
 }
