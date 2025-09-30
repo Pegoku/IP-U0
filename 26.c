@@ -1,10 +1,12 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
-
 int main() {
-    printf("%d", calcQuadrat(4));
+    char l;
+    scanf("%c", &l);
+    if (l == 'a' || l == 'e' || l == 'i' || l == 'o' || l == 'u'){
+        printf("Es una vocal");
+    } else{
+        printf("Es una Consonant");
+    }
     return 0;
 }

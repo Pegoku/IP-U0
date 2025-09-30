@@ -1,10 +1,12 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
-
 int main() {
-    printf("%d", calcQuadrat(4));
+    char l;
+    scanf("%c", &l);
+    if (l == 'a'){
+        printf("Es una a");
+    } else{
+        printf("No es una a");
+    }
     return 0;
 }
