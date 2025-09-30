@@ -1,10 +1,22 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
-
 int main() {
-    printf("%d", calcQuadrat(4));
+    int num1, num2, numDif, numSum;
+
+    printf("Introdueix dos nombres\n");
+    scanf("%d %d", &num1, &num2);
+    // printf("Num1:%d\nNum2:%d\n", num1, num2);
+    while (!(num1<num2)){
+        printf("El primer ha de ser més petit que el segon\n");
+        scanf("%d %d", &num1, &num2);
+        // printf("Num1:%d\nNum2:%d\n", num1, num2);
+    }
+    
+    numDif = num2 - num1;
+    for (int i = num1; i <= num2; i++){
+        numSum += i;
+    }
+    printf("Hi ha %d nombres i la suma es %d", numDif, numSum);
+
     return 0;
 }

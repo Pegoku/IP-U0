@@ -2,23 +2,30 @@
 
 int main()
 {
-    int posNums, negNums, num;
+    float posNums, posNumsC, negNums, negNumsC, num;
 
     for (int i = 0; i < 20; i++)
     {
-        scanf("%d", &num);
+        scanf("%f", &num);
         if (num > 0)
         {
             posNums += num;
+            posNumsC++;
         }
-        else
+        if (num < 0)
         {
             negNums += num;
+            negNumsC++;
         }
     }
 
-    printf("Positius: %d\n", posNums);
-    printf("Negatius: %d", negNums);
-
+    if (posNumsC)
+    {
+        printf("Positius: %f\n", posNums / posNumsC);
+    }
+    if (negNumsC)
+    {
+        printf("Negatius: %f", negNums / negNumsC);
+    }
     return 0;
 }

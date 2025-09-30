@@ -1,10 +1,18 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
+int main()
+{
+    int minNumber;
+    int readNumber;
 
-int main() {
-    printf("%d", calcQuadrat(4));
+    for (int i = 0; i < 20; i++)
+    {
+        scanf("%d", &readNumber);
+        if (!minNumber || readNumber < minNumber)
+        {
+            minNumber = readNumber;
+        }
+    }
+    printf("Nombre mes petit: %d", minNumber);
     return 0;
 }
