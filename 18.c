@@ -1,10 +1,11 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
-
 int main() {
-    printf("%d", calcQuadrat(4));
+    int num;
+    char lletra;
+
+    scanf("%c %d", &lletra, &num);
+    printf("%d\n%c", num, lletra);
+
     return 0;
 }

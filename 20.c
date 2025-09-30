@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
-
 int main() {
-    printf("%d", calcQuadrat(4));
+    int num1, num2;
+
+    scanf("%d %d", &num1, &num2);
+    printf("%d", num1*num2);
     return 0;
 }
