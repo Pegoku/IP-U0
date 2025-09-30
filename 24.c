@@ -1,10 +1,16 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
-
 int main() {
-    printf("%d", calcQuadrat(4));
+
+    int num1;
+
+    scanf("%d", &num1);
+    if (num1 >= 100 && num1 <= 200){
+        printf("El nombre es bo");
+    }    
+    else{
+        printf("El nombre es dolent");
+    }
+
     return 0;
 }
