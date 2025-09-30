@@ -5,11 +5,9 @@ int main() {
 
     printf("Introdueix dos nombres\n");
     scanf("%d %d", &num1, &num2);
-    // printf("Num1:%d\nNum2:%d\n", num1, num2);
     while (!(num1<num2)){
         printf("El primer ha de ser més petit que el segon\n");
         scanf("%d %d", &num1, &num2);
-        // printf("Num1:%d\nNum2:%d\n", num1, num2);
     }
     
     numDif = num2 - num1;
