@@ -1,10 +1,26 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
+int main()
+{
+    int choice, num;
 
-int main() {
-    printf("%d", calcQuadrat(4));
+    printf("Tria una opció\n\
+    1. Quin any vaig neixer?\n\
+    2. Hola que tal\n\
+    3. Sortir\n");
+    scanf("%d", &choice);
+    switch (choice)
+    {
+    case 1:
+        printf("Quina es la teva edat?\n");
+        scanf("%d", &num);
+        printf("Vas neixer al %d", 2025 - num);
+        break;
+    case 2:
+        printf("Hola que tal\n");
+        break;
+    default:
+        break;
+    }
     return 0;
 }

@@ -1,10 +1,19 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
+int main()
+{
+    int choice = 1, sum, value;
 
-int main() {
-    printf("%d", calcQuadrat(4));
+    while (choice == 1)
+    {
+        printf("Introdueix un nombre\n");
+        scanf("%d", &value);
+        sum += value;
+
+        printf("Vols continuar? (1(Si)/0(No))\n");
+        scanf("%d", &choice);
+    }
+    printf("%d", sum);
+
     return 0;
 }
