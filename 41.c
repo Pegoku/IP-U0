@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
-
 int main() {
-    printf("%d", calcQuadrat(4));
+    char name[128];
+    printf("Quin es el teu nom?\n");
+    scanf("%s", &name);
+    printf("Hola %s", name);
     return 0;
 }
