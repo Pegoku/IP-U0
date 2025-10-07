@@ -1,10 +1,15 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
-
 int main() {
-    printf("%d", calcQuadrat(4));
+    char ll, ll2;
+    for (int i = 0; i < 10; i++){
+        printf("Introdueix una lletra\n");
+        fflush(stdout);
+        scanf(" %c", &ll2);
+        if (i == 0 || ll2 < ll){
+            ll = ll2;
+        }
+    }
+    printf("%c\n", ll);
     return 0;
 }
