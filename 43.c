@@ -1,10 +1,18 @@
 #include <stdio.h>
+#include <string.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
+int main()
+{
+    char cadna[128] = "endavant", cadna2[128];
 
-int main() {
-    printf("%d", calcQuadrat(4));
+    printf("Introdueix la paraula secreta\n");
+    scanf("%s", &cadna2);
+    while (strcmp(cadna, cadna2) != 0)
+    {
+        printf("torna a provar\n");
+        scanf("%s", &cadna2);
+    }
+    printf("la porta està oberta");
+
     return 0;
 }
