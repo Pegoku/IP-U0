@@ -1,10 +1,12 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
-
 int main() {
-    printf("%d", calcQuadrat(4));
+    for (int i = 0; i < 16; i++)
+    {
+        for (int j = 0; j < 8; j++){
+            printf("%d %c | ", i+16*j);
+        }
+        printf("\n");
+    }
     return 0;
 }
