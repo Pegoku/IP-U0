@@ -1,10 +1,13 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
-
 int main() {
-    printf("%d", calcQuadrat(4));
+    char c[128] = {};
+    printf("Introdueix una frase \n");
+
+    scanf("%s", &c);
+    for (int i = 127; i >= 0; i--){
+        printf("%c", c[i]);
+    }
+
     return 0;
 }
