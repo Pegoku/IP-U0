@@ -1,10 +1,8 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
 
 int main() {
-    printf("%d", calcQuadrat(4));
+    for (int i = 50; i < 120; i++)
+    printf("%d %c\n", i, i);
     return 0;
 }

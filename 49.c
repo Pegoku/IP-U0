@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 char codeToChar(int code)
 {
@@ -9,11 +10,27 @@ char codeToChar(int code)
 void codeStr(char strIn[128], int code)
 {
     char strOut[128];
+    int offset = 0;
 
     for (int i = 0; i < strlen(strIn); i++)
     {
-        strOut[i] = strIn[i] + code;
+        char cIn = toupper(strIn[i]);
+        // printf("%c", cIn);
+        if ((cIn + code )> 90)
+        {
+            offset = 26; 
+        }
+        // else{
+        //     // printf("%d %d %c", strIn[i], (strIn[i] - code ), (strIn[i] - code ));
+        //     offset = 0;
+        // }
+        strOut[i] = cIn + code - offset;
     }
+    // for (int i = 0; i < strlen(strIn); i++)
+    // {
+        
+    //     strOut[i] = strIn[i] + code;
+    // }
 
     strOut[strlen(strIn)] = '\0';
     printf("%s\n", strOut);
@@ -22,10 +39,20 @@ void codeStr(char strIn[128], int code)
 void decodeStr(char strIn[128], int code)
 {
     char strOut[128];
+    int offset = 0;
 
     for (int i = 0; i < strlen(strIn); i++)
     {
-        strOut[i] = strIn[i] - code;
+        char cIn = toupper(strIn[i]);
+        if ((cIn - code )< 65)
+        {
+            offset = 26; 
+        }
+        // else{
+        //     // printf("%d %d %c", strIn[i], (strIn[i] - code ), (strIn[i] - code ));
+        //     offset = 0;
+        // }
+        strOut[i] = cIn - code + offset;
     }
 
     strOut[strlen(strIn)] = '\0';
@@ -51,8 +78,11 @@ int main()
         {
         case 'a':
         
-        while(!(code <=26 && code >= 0)){
         printf("Introdueix el codi (entre 0 i 26): ");
+        scanf("%d", &code);
+
+        while(!(code <=26 && code >= 0)){
+            printf("Introdueix el codi (entre 0 i 26): ");
             scanf("%d", &code);
         }
             break;
@@ -62,6 +92,7 @@ int main()
         case 'c':
             printf("Introdueix la frase a xifrar: ");
             scanf("%s", &strIn);
+            
             codeStr(strIn,code);
             break;
         case 'd':
