@@ -2,7 +2,8 @@
 
 
 int main() {
-    for (int i = 50; i < 120; i++)
-    printf("%d %c\n", i, i);
+    char c[128], d[128];
+    scanf("%s %s", c, d);
+    printf("%s %s\n", d, c);
     return 0;
 }
