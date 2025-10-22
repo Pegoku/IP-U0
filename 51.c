@@ -1,10 +1,14 @@
 #include <stdio.h>
 
-int calcQuadrat(int num){
-    return num * num;
-}
-
 int main() {
-    printf("%d", calcQuadrat(4));
+    char c[128], d;
+    scanf("%s %c", c, d); 
+    for (int i = 0; i < strlen(c); i++){
+        if (c[i] == d){
+            printf("hi es");
+            return 0;
+        }
+    }
+    printf("no hi es");
     return 0;
 }
