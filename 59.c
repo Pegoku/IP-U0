@@ -8,7 +8,8 @@ int main() {
         scanf("%d", &a[i]);
         printf("Continuar (1/0): ");
         scanf("%d", &c);
-        if (c == 1) i++;
+        // if (c == 1) i++;
+        i++;
     }
     for (int j = 0; j<i; j++){
         x+= a[j];
