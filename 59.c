@@ -14,8 +14,13 @@ int main() {
     for (int j = 0; j<i; j++){
         x+= a[j];
     }
-    printf("Num de nombres: %d ", i);
-    printf("Sum: %d ", x);
-    printf("Mitja: %lf", (float) x/ (float) i);
+    printf("Quantitat de nombres: %d, ", i);
+    printf("Suma: %d, ", x);
+    printf("Mitja: %lf\n", (float) x/ (float) i);
+    printf("Nombres     Diferència\n\
+--------    ----------\n");
+    for (int j = 0; j<i; j++){
+        printf("   %d         %lf\n", a[j], a[j]-((float) x/ (float) i));
+    }
     return 0;
 }
