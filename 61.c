@@ -1,10 +1,17 @@
 #include <stdio.h>
+#include <ctype.h>
 
-int calcQuadrat(int num){
+int isNum(int num){
     return num * num;
 }
 
 int main() {
-    printf("%d", calcQuadrat(4));
+    char c;
+    printf("Introdueix un caracter: ");
+    scanf("%c", &c);
+
+    if (!isdigit(c)) printf("no ");    
+    printf("es un digit");
+
     return 0;
 }
