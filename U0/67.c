@@ -44,7 +44,8 @@ int main() {
     for (int i = 0; i < strlen(e); i++){
         d[i] = '_';
     }
-    for (int i = 0; i < strlen(e); i++){
+    d[strlen(e)] = '\0';
+    for (int i = 0; i < strlen(d); i++){
         printf("%c ", d[i]);
     }
     printf("\n");
