@@ -38,11 +38,13 @@ int main() {
     // scanf("%s", e);
 
     srand(time(NULL));
-    strcpy(e,  paraulesOcultes[rand()%19]);    
+    rand();
+    strcpy(e,  paraulesOcultes[rand()%20]);    
+    // printf("%s", e);
     for (int i = 0; i < strlen(e); i++){
         d[i] = '_';
     }
-    for (int i = 0; i < strlen(d); i++){
+    for (int i = 0; i < strlen(e); i++){
         printf("%c ", d[i]);
     }
     printf("\n");
@@ -52,8 +54,8 @@ int main() {
         printf("Vides: %d\n", v);
         printf("Prova una lletra: ");
         // scanf("%c", &f)
-        // while (getchar() != '\n');
         scanf("%c", &f);
+        while (getchar() != '\n');
         // printf("%c char\n", f);
         if (!checkForMatch(d, e, f)){
             v--;
@@ -61,8 +63,8 @@ int main() {
         printStr(d);
     }
     if (v == 0){
-        printf("Has perdut");
-        printf("La paraula era %s", c);
+        printf("Has perdut\n");
+        printf("La paraula era %s", e);
     }
     else{
         printf("Has guanyat!");
